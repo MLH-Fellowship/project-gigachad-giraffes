@@ -61,8 +61,8 @@ img {
 .profile {
     background-color: #1d539f !important;
     text-align: center;
-    height: 420px;
-    margin-bottom: 0px;
+    height: 430px;
+    margin-bottom: 35px;
 }
 
 .profile h1 {
@@ -138,6 +138,7 @@ img {
   /* Padding inside Card */
   .container {
     padding: 2px 16px;
+    padding-top: 20px;
   }
 
 
@@ -150,5 +151,44 @@ img {
   #img_1 {
       width: 300px;
       height: 150px;
+  }
+
+
+  /* Icons */
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #1d539f;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #1d539f;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #1d539f;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #1d539f;
+    color: white;
+  }
+
+  .fa-github {
+    background: #1d539f;
+    color: white;
   }
 
