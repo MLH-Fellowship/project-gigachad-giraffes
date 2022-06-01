@@ -13,4 +13,4 @@ For each of these tasks, you should create an [Issue](https://docs.github.com/en
 ### About Section
 - [ ] Create a unique biography section
 - [ ] Add stylizing
-
+- [ ] Add personal greeting video
