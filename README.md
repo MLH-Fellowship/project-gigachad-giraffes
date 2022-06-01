@@ -11,6 +11,6 @@ For each of these tasks, you should create an [Issue](https://docs.github.com/en
 *Note: Make sure to include a link to the Issue you're working on inside of your Pull Request so your reviewer knows what you're working on!*
 
 ### About Section
-- [x] Create a unique biography section
-- [x] Add stylizing
+- [ ] Create a unique biography section
+- [ ] Add stylizing
 
