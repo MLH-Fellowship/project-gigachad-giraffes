@@ -10,6 +10,15 @@ body {
     font-family: "Roboto", serif;
     margin: 0px;
 }
+h2 {
+    font-size: 200px;
+    font-weight: 700;
+    color: black;
+}
+
+img {
+    width: 200px;
+}
 
 .nav-bar {
     width: 100%;
@@ -52,14 +61,20 @@ body {
 .profile {
     background-color: #1d539f !important;
     text-align: center;
-    height: 320px;
-    margin-bottom: 50px;
+    height: 420px;
+    margin-bottom: 0px;
 }
 
 .profile h1 {
         font-size: 50px;
         font-weight: 700;
         color: white;
+}
+
+.profile h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
 }
 
 .profile img {
@@ -69,11 +84,11 @@ body {
         margin-left: auto;
         margin-right: auto;
         display: block;        
-        padding: 20px;
+        padding: 10px;
 }
 
 .profile .profile-picture {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     height: 200px;
 }
 
