@@ -70,13 +70,10 @@
         {% for experience in education %}
         <div class="section">
           <div class="align-left">
-            <p>{{experience.type}}</p>
+            <p>{{experience.type}} from {{experience.from}}</p>
           </div>
           <div class="align-right">
             <p>{{experience.when}}</p>
-          </div>
-          <div class="align-center">
-            <p>{{experience.from}}</p>
           </div>
         </div>
         {% endfor %}
