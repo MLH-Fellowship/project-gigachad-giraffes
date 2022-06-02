@@ -38,9 +38,7 @@
             </a>
         </div>
     </header>
-    <div class="bg"></div>
-<div class="bg bg2"></div>
-<div class="bg bg3"></div>
+
     <div class="profile">
         <div id="profile-picture" class="profile-picture">
             <img src="./static/img/logo.jpg">
@@ -64,78 +62,51 @@
         </div>
       </div>
 
+      <br>
 
-    </div>
-    <div class="catTitle">Skills</div>
-
-    <div class = "category">
-        <b>Programming Languages:</b> Python, R, SQL, JavaScript<br><br>
-        <b>Tools:</b> Too Many
-    </div>
-
-    <div class="catTitle">Experience</div> <br>
-
-    <div class ="category">
-        <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
+    <div class="card">
+      <div class="container">
+        <h2>Education</h2>
+        {% for experience in education %}
+        <div class="section">
+          <div class="align-left">
+            <p>{{experience.type}} from {{experience.from}}</p>
+          </div>
+          <div class="align-right">
+            <p>{{experience.when}}</p>
+          </div>
         </div>
-        <div class="subCat">The Linux Corporation</div>
-        <div class = "h2">June 2020 - Present</div>    
-    </div>
-
-    <div class="catTitle">Education</div> <br>
-
-    <div class ="category">
-        <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
-        </div>
-        <div class="subCat">PhD in Computer Science</div>
-        <div class = "h2">1980 - 1984</div>    
-    </div>
-
-    <div class="catTitle">Hobbies</div> <br>
-
-    <div class ="category">
-        <div id="profile-picture" class="profile-picture">
-            <img src="./static/img/logo.jpg">
-        </div>
-        <div class="subCat">Reading</div>
-        <div class = "h2">I am an avid reader</div>    
-    </div>
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        {% endfor %}
       
+      </div>
+    </div>
+
+    <br>
+
+    <div class="card">
+      <div class="container">
+        <h2>Skills</h2>
+          <!--<img src="./static/img/sample_pic.jpg" id="img_1">-->
+            <p>{{skills}}</p>
+      </div>
+    </div>
+
+
+    <h2>My Experience</h2>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">      
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-          <div class="item active">
-            <img src="./static/img/logo.jpg" alt="Chania" class = "center">
-            <div class="carousel-caption">
-              <h3>Los Angeles</h3>
-              <p>LA is always so much fun!</p>
+          {% for experience in work %}
+            <div class="item{% if loop.index == 1 %} active{% endif %}">
+              <img src="./static/img/logo.jpg"  class="img-responsive" alt="test1">
+              <div class="carousel-caption">
+                <p>{{experience.jobTitle}}</p>
+                <p>{{experience.year}}</p>
+                <br> <br>
+                <p>{{experience.desc}}</p>
+              </div>
             </div>
-          </div>
-      
-          <div class="item">
-            <img src="./static/img/logo.jpg" alt="Chicago" class = "center">
-            <div class="carousel-caption">
-              <h3>Chicago</h3>
-              <p>Thank you, Chicago!</p>
-            </div>
-          </div>
-      
-          <div class="item">
-            <img src="./static/img/logo.jpg" alt="New York" class = "center">
-            <div class="carousel-caption">
-              <h3>New York</h3>
-              <p>We love the Big Apple!</p>
-            </div>
-          </div>
+          {% endfor %}
         </div>
       
         <!-- Left and right controls -->

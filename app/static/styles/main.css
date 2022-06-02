@@ -127,7 +127,7 @@ img {
     transition: 0.5s;
     background-color: #1d539f;
     width: 90%;
-    height: 30%;
+    height: auto;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -199,14 +199,19 @@ img {
   }
 
   .carousel {
-    width:40%;
-    height:40%;
+    width:50%;
+    height: 50%;
     margin: auto;
   }
+  .carousel .item {
+    height: 50%;
+  }
+  .carousel img { height: 400px;}
   .carousel .item img {
     opacity: 0.3;
     align-self: center;
     margin: auto;
+    
   }
   .center {
     display: block;
@@ -216,3 +221,6 @@ img {
   .carousel-inner { 
     background-color: black !important; 
   }
+  .align-left{ float: left;width:40%; }
+  .section .align-right{ float: right;width:10%; }
+  .section .align-center{ float: center;width:20%; }
