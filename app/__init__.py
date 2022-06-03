@@ -1,9 +1,13 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 from dotenv import load_dotenv
+from flask_mail import Message, Mail
+
 
 load_dotenv()
+
 app = Flask(__name__, static_folder='static')
+
 
 userinfo = {'name': 'Alan Turing',
     'shortIntro': 'Aspiring Skynet Developer and Professional Programmer',
@@ -16,9 +20,12 @@ userinfo = {'name': 'Alan Turing',
     'hobbies':  [{'title': 'Basketball', 'desc': 'My Favorite Sport!'}, {'title': 'Fishing', 'desc': 'My favorite way to relax!'}, {'title': 'Paddleboarding', 'desc': 'My favorite watersport!'}]
  }
 
+
 @app.route('/')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+    return render_template('index.html', title='MLH Fellow', url=os.getenv('URL'), name=userinfo['name'],
+    shortIntro=userinfo['shortIntro'], longIntro = userinfo['longIntro'], work = userinfo['work'], skills = userinfo['skills'],
+    education = userinfo['education'], email=userinfo['email'])
 
 @app.route('/hobbies')
 def hobbies():
