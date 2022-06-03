@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="Personal Portfolio">
+    <meta property="og:description" content="My Personal Portfolio">
+    <meta property="og:url" content="{{ url }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link lang='sass' rel="stylesheet" href="./static/styles/hobbies.css">
+    <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/mappa-mundi@0.0.4"></script>
+	<script src="./static/scripts/sketch.js"></script>
+
+    <title>{{ title }}</title>
+</head>
+
+<style>
+    .mySlides {display:none; margin-top: 20px;}
+</style>
+
+<body>
+    <header class="nav-bar">
+        <div class="nav-content">
+            <a href="/">
+                <div class="nav-logo">
+                    <img src="./static/img/logo.svg" />
+                </div>
+                <div class="nav-links">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-github"></a>
+                </div>
+            </a>
+        </div>
+    </header>
+
+
+
+
+      
+      <div class="w3-content w3-display-container">
+      
+      <div class="w3-display-container mySlides">
+        <img src="./static/img/hobbies_gallery/basketball.jpeg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
+          B-Ball
+        </div>
+      </div>
+      
+      <div class="w3-display-container mySlides">
+        <img src="./static/img/hobbies_gallery/fishing.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
+          Fishing
+        </div>
+      </div>
+      
+      <div class="w3-display-container mySlides">
+        <img src="./static/img/hobbies_gallery/paddleboarding.jpg" style="width:100%">
+        <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
+          Water
+        </div>
+      </div>
+      
+      
+      <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+      
+      </div>
+      
+      <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+           x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
+
+    <div class="card">
+        <div class="container">
+          <h2>Basketball</h2>
+            <!--<img src="./static/img/sample_pic.jpg" id="img_1">-->
+                <p>Basketball is cool</p>
+                <p>It is my favortie sport</p>
+        </div>
+      </div>
+
+
+
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <p class="footer-links">
+                <a class="link-1" href="#">Home</a>
+                <a href="#">Blog</a>
+                <a href="#">Hobbies</a>
+                <a href="#">Experience</a>
+                <a href="#">Contact</a>
+            </p>
+
+            <p>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-github"></a>
+            </p>   
+
+            <p id="copyright">Alan Turing &copy; 2022</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>
