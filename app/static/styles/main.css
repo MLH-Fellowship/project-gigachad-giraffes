@@ -213,6 +213,9 @@ img {
     font-size: 22px;
     font-weight: 700;
     text-decoration: underline;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .footer-distributed {
@@ -223,12 +226,16 @@ img {
     text-align: left;
     font: normal 16px sans-serif;
     padding: 45px 50px;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .footer-distributed .footer-left p {
     color: #8f9296;
     font-size: 14px;
     margin: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   /* Footer links */
   
@@ -239,6 +246,8 @@ img {
     margin: 0 0 10px;
     padding: 0;
     transition: ease .25s;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .footer-distributed p.footer-links a {
@@ -247,6 +256,8 @@ img {
     text-decoration: none;
     color: inherit;
     transition: ease .25s;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .footer-distributed .footer-links a:before {
@@ -284,6 +295,7 @@ img {
 
   .footer-distributed .footer-left #copyright {
       margin-top: 20px;
+
   }
   
   .footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
@@ -304,7 +316,6 @@ img {
       line-height: 1.8;
     }
   }
-
 
   .carousel {
     width:50%;
