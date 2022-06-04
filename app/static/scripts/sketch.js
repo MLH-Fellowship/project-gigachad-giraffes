@@ -16,34 +16,38 @@ const options = {
 function preload() {
   visited = loadTable('../static/data/visited.csv', 'header');
   
-  countries = loadJSON('../static/data/places.json');
 }
 
 function setup() {
   canvas = createCanvas(800, 600);
+  canvas.parent("placement");
   visitmap = mappa.tileMap(options);
   visitmap.overlay(canvas);
 
+  
+  
+  //console.log(data);
+
+  // console.log(countries);
+  //console.log(youtubeData);
+}
+
+function templatedata(name){
+  countries = loadJSON(name);
   for (let row of visited.rows) {
     let coords = countries[row.get('id')];
     let latitude = coords[0]
     let longitude = coords[1]
     data.push({latitude,longitude});
   }
-
-  console.log(data);
-
-  // console.log(countries);
-  //console.log(youtubeData);
 }
 
 function draw() {
-  clear();
+  clear()
   for (let country of data) {
     const pix = visitmap.latLngToPixel(country.latitude, country.longitude);
     fill(255, 0, 200, 100);
-    const zoom = visitmap.zoom();
-    const scl = pow(2, zoom); // * sin(frameCount * 0.1);
-    ellipse(pix.x, pix.y, 3 * scl);
+
+    ellipse(pix.x, pix.y, 10);
   }
 }
