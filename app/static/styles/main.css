@@ -123,11 +123,22 @@ img {
   font-weight: 20px;
   text-align: center;
 }
+.card .container img {
+  width: 5%;
+  height: auto;
+  float: left;   
+  margin: 30px 12px 3px 4px; 
 
-.container p {
-  color: white;
 }
 
+.container .lower p {
+  font-size: 18px;
+  color: black;
+}
+.container .section .upper p {
+  font-size: 20px;
+  line-height: .1;
+}
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -148,14 +159,15 @@ img {
 
 /* Padding inside Card */
 .container {
+  margin: 1px 1px 1px 1px;
   padding: 2px 4px;
   padding-top: 1%;
   word-wrap: normal;
+  display: block;
 }
 
 
 .card p {
-  font-size: 18px;
   text-align: left;
   vertical-align: top;
   word-wrap: normal;
@@ -458,6 +470,15 @@ section {
     background-color: black !important; 
   }
 
+  .align-left{ float: left;width:40%; }
+  .section .upper{
+    text-align: left;
+    line-height: .2;
+  }
+  .section .upper p {
+    color: black;
+    line-height: .2;
+  }
 
 .carousel {
   width: 50%;
@@ -496,14 +517,10 @@ section {
   width: 50%;
 }
 
-.section .align-right {
-  float: right;
-  width: 50%;
-}
 
-.section .align-center {
-  float: center;
-  width: 20%;
+.section .upper {
+  text-align: left;
+  line-height: .2em;
 }
 
 .navbar-nav {
