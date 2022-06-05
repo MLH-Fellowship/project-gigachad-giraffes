@@ -30,21 +30,30 @@
 </head>
 
 <body>
+  <div class="area" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
   {% include 'navbar.html' %}
 
   <div class="profile">
+    <br>
+    <br>
     <div id="profile-picture" class="profile-picture">
       <img src="./static/img/logo.jpg">
     </div>
     <h1>{{ name }}</h1>
     <h2> {{shortIntro}}</h2>
-    <p>
-      <a href="https://www.{{facebook}}" class="fa fa-facebook"></a>
-        <a href="https://www.{{twitter}}" class="fa fa-twitter"></a>
-        <a href="https://www.{{instagram}}" class="fa fa-instagram"></a>
-        <a href="https://www.{{linkedin}}" class="fa fa-linkedin"></a>
-        <a href="https://www.{{github}}" class="fa fa-github"></a>
-    </p>
   </div>
 
   <div class="card">
@@ -62,8 +71,9 @@
       <h2>Education</h2>
       {% for experience in education %}
       <div class="section">
-
+        <img src={{experience.link}} class="img-responsive" alt="test1">
         <div class="upper">
+          <br>
           <p>{{experience.type}} from {{experience.from}}</p>
           <p style="font-size: 15px;">{{experience.when}}</p>
         </div>
@@ -93,7 +103,7 @@
       <h2>Experience</h2>
       {% for experience in work %}
         <div class="section">
-          <img src="./static/img/logo.jpg" class="img-responsive" alt="test1">
+          <img src={{experience.link}} class="img-responsive" alt="test1">
           <div class="upper">
             <br>
             <p>{{experience.jobTitle}}</p>
@@ -128,20 +138,7 @@
       <p id="copyright">{{name}} &copy; 2022</p>
     </div>
   </footer>
-  <div class="area" >
-    <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-    </ul>
-</div >
+  
 
 
 </body>
