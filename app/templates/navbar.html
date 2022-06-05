@@ -21,13 +21,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <a class="nav-item nav-link" href="{{url}}">Home</a>
+            <a class="nav-item nav-link" href="/">Home</a>
             <a class="nav-item nav-link" href="hobbies">Hobbies</a>
+            <a class="nav-item nav-link" href="projects">Projects</a>
             <form id="contactForm" name="sentMessage" novalidate="novalidate"
             action="mailto:{{email}}?subject=feedback&body=message">
-            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Contact</button>
+            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" style="background-color: #343a40; color:#ff8c00; border: #343a40;" type="submit">Contact</button>
             </div>
           </form>
+          <a href="https://www.{{facebook}}" class="fa fa-facebook"></a>
+          <a href="https://www.{{twitter}}" class="fa fa-twitter"></a>
+          <a href="https://www.{{instagram}}" class="fa fa-instagram"></a>
+          <a href="https://www.{{linkedin}}" class="fa fa-linkedin"></a>
+          <a href="https://www.{{github}}" class="fa fa-github"></a>
         </div>
     </div>
 </nav>
