@@ -35,3 +35,11 @@ def hobbies():
     hobbies = userinfo["hobbies"]
     )
 
+@app.route('/projects')
+def projects():
+    return render_template('projects.html', 
+    title="Projects", 
+    url=os.getenv("URL"),
+    )
+
+
