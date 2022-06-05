@@ -37,13 +37,13 @@
       <img src="./static/img/logo.jpg">
     </div>
     <h1>{{ name }}</h1>
-    <h3> {{shortIntro}}</h3>
+    <h2> {{shortIntro}}</h2>
     <p>
-      <a href="#" class="fa fa-facebook"></a>
-      <a href="#" class="fa fa-twitter"></a>
-      <a href="#" class="fa fa-instagram"></a>
-      <a href="#" class="fa fa-linkedin"></a>
-      <a href="#" class="fa fa-github"></a>
+      <a href="https://www.{{facebook}}" class="fa fa-facebook"></a>
+        <a href="https://www.{{twitter}}" class="fa fa-twitter"></a>
+        <a href="https://www.{{instagram}}" class="fa fa-instagram"></a>
+        <a href="https://www.{{linkedin}}" class="fa fa-linkedin"></a>
+        <a href="https://www.{{github}}" class="fa fa-github"></a>
     </p>
   </div>
 
@@ -62,10 +62,10 @@
       <h2>Education</h2>
       {% for experience in education %}
       <div class="section">
-        <div class="align-left">
+        <div style='text-align:left'>
           <p>{{experience.type}} from {{experience.from}}</p>
         </div>
-        <div class="align-right">
+        <div style='text-align:right'>
           <p>{{experience.when}}</p>
         </div>
       </div>
@@ -112,7 +112,7 @@
     </a>
   </div>
   <form id="contactForm" name="sentMessage" novalidate="novalidate"
-    action="mailto:tanzirtheboss@gmail.com?subject=feedback&body=message">
+    action="mailto:{{email}}?subject=feedback&body=message">
     <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Contact</button>
     </div>
   </form>
@@ -126,20 +126,33 @@
         <a href="#">Blog</a>
         <a href="#">Hobbies</a>
         <a href="#">Experience</a>
-        <a href="#">Contact</a>
       </p>
 
       <p>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
-        <a href="#" class="fa fa-instagram"></a>
-        <a href="#" class="fa fa-linkedin"></a>
-        <a href="#" class="fa fa-github"></a>
+        <a href="https://www.{{facebook}}" class="fa fa-facebook"></a>
+        <a href="https://www.{{twitter}}" class="fa fa-twitter"></a>
+        <a href="https://www.{{instagram}}" class="fa fa-instagram"></a>
+        <a href="https://www.{{linkedin}}" class="fa fa-linkedin"></a>
+        <a href="https://www.{{github}}" class="fa fa-github"></a>
       </p>
 
       <p id="copyright">{{name}} &copy; 2022</p>
     </div>
   </footer>
+  <div class="area" >
+    <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul>
+</div >
 
 
 </body>
