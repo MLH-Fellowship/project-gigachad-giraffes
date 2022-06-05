@@ -15,9 +15,14 @@ userinfo = {'name': 'Alan Turing',
     'work': [{'jobTitle': 'Software Engineer @ MLH', 'desc': "I created the backend of the LMS", "year": "1999"},
         {'jobTitle': 'Software Engineer @ Meta', 'desc': "I created facebook mobile application", "year": "2004-2022"}],
     'skills': 'Python, Flask, Googling, JavaScript, Unity',
-    'education': [{'type': 'PhD of Computer Science', 'from': 'Columbia University', 'when': '1984-1989'}],
+    'education': [{'type': 'PhD of Computer Science', 'from': 'Columbia University', 'when': '1984-1989', 'desc': 'I studied stuff'}],
     'email': '123fakemail@gmail.com',
-    'hobbies':  [{'title': 'Basketball', 'desc': 'My Favorite Sport!'}, {'title': 'Fishing', 'desc': 'My favorite way to relax!'}, {'title': 'Paddleboarding', 'desc': 'My favorite watersport!'}]
+    'hobbies':  [{'title': 'Basketball', 'desc': 'My Favorite Sport!'}, {'title': 'Fishing', 'desc': 'My favorite way to relax!'}, {'title': 'Paddleboarding', 'desc': 'My favorite watersport!'}],
+    'facebook': 'facebook.com',
+    'github': 'github.com',
+    'instagram': 'instagram.com',
+    'linkedin':'linkedin.com' ,
+    'twitter':'twitter.com'
  }
 
 
@@ -25,14 +30,15 @@ userinfo = {'name': 'Alan Turing',
 def index():
     return render_template('index.html', title='MLH Fellow', url=os.getenv('URL'), name=userinfo['name'],
     shortIntro=userinfo['shortIntro'], longIntro = userinfo['longIntro'], work = userinfo['work'], skills = userinfo['skills'],
-    education = userinfo['education'], email=userinfo['email'])
+    education = userinfo['education'], email=userinfo['email'], facebook = userinfo['facebook'], instagram = userinfo['instagram'],
+    github=userinfo['github'], linkedin=userinfo['linkedin'], twitter = userinfo['twitter'])
 
 @app.route('/hobbies')
 def hobbies():
     return render_template('hobbies.html', 
     title="Hobbies", 
     url=os.getenv("URL"),
-    hobbies = userinfo["hobbies"]
+    hobbies = userinfo["hobbies"],
     )
 
 @app.route('/projects')
