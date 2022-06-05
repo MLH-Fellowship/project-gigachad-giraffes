@@ -25,13 +25,13 @@ userinfo = {'name': 'Alan Turing',
 def index():
     return render_template('index.html', title='MLH Fellow', url=os.getenv('URL'), name=userinfo['name'],
     shortIntro=userinfo['shortIntro'], longIntro = userinfo['longIntro'], work = userinfo['work'], skills = userinfo['skills'],
-    education = userinfo['education'], email=userinfo['email'])
+    education = userinfo['education'], email =userinfo['email'])
 
 @app.route('/hobbies')
 def hobbies():
     return render_template('hobbies.html', 
     title="Hobbies", 
     url=os.getenv("URL"),
-    hobbies = userinfo["hobbies"]
+    hobbies = userinfo["hobbies"],
     )
 
