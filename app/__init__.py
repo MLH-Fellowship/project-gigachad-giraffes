@@ -40,4 +40,10 @@ def hobbies():
     url=os.getenv("URL"),
     hobbies = userinfo["hobbies"],
     )
+@app.route('/projects')
+def projects():
+    return render_template('projects.html', 
+    title="Projects", 
+    url=os.getenv("URL"),
+    )
 
