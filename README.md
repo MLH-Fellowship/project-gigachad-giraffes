@@ -1,6 +1,6 @@
-# Production Engineering - Week 1 - Portfolio Site
+# Portfolio Site - MLH Fellowship Pod 22.SUM14 Team Gigachad Giraffes
 
-A portfolio website for the week 1 hackathon of the Production Engineering Track. This project was developed with Flask, HTML/CSS, JavaScript. This project was developed by Tanzir Hasan, Ryson Wang, Krish Thawni
+A portfolio website for the week 1 hackathon of the Production Engineering Track. This project was developed with Flask, HTML/CSS, JavaScript. This project was developed by Tanzir Hasan, Ryson Wong, Krish Thawni
 
 ## Components of the Website
 
@@ -22,7 +22,7 @@ Here is the hobbies page.
 
 ![Hobbies Page](https://github.com/MLH-Fellowship/project-gigachad-giraffes/blob/main/READMEimg/Hobbies.png)
 
-There is a carousel that is jinja templated and can be used to add an infinite number of hobbies.
+There is a carousel that is jinja templated and can be used to add an infinite number of hobbies. It contains a title and a description of what is displayed in each specific image.
 
 <br>
 
@@ -42,7 +42,7 @@ A map of all the places you've been are at the bottom and can be modified by cha
 
 ## Tasks
 
-In the hackathon the following tasks were completed:
+In the hackathon the following tasks we completed are below:
 
 ### GitHub Tasks
 - [x] Create Issues for each task below
@@ -62,27 +62,3 @@ In the hackathon the following tasks were completed:
 - [x] Add a template for adding multiple work experiences/education/hobbies using [Jinja](https://jinja.palletsprojects.com/en/3.0.x/api/#basics)
 - [x] Create a new page to display hobbies.
 - [x] Add a menu bar that dynamically displays other pages in the app
-
-
-## Installation
-
-Install all dependencies with Python and pip:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Running
-
-Start flask development server to run this project
-```bash
-$ export FLASK_ENV=development
-$ flask run
-```
-
-Access the website at `localhost:5000` or `127.0.0.1:5000` in the browser! 
-
-## Customizing
-
-Information in the python `__init__.py` file can be modified to add your name, hobbies, education, experiences, projects and more to the app.
-
