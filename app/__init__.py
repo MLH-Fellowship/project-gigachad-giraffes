@@ -2,6 +2,7 @@ import os
 from flask import Flask, render_template, request, flash
 from dotenv import load_dotenv
 from flask_mail import Message, Mail
+import requests
 
 
 load_dotenv()
@@ -35,13 +36,24 @@ userinfo = {'name': 'Alan Turing',
     'twitter':'twitter.com'
  }
 
+def openweathermap(city_name):
+    api_key = str(os.getenv("APIKEY")) #Openweathermap api key is easy to obtain
+    base_url = "http://api.openweathermap.org/data/2.5/weather?"
+    complete_url = base_url + f'appid={api_key}' + "&q=" + city_name
+    response = requests.get(complete_url)
+    #requests json information from the API
+    x = response.json()
+    x=x['weather']
+    x= x[0]
+    return x['description']
 
 @app.route('/')
 def index():
     return render_template('index.html', title='MLH Fellow', url=os.getenv('URL'), name=userinfo['name'],
     shortIntro=userinfo['shortIntro'], longIntro = userinfo['longIntro'], work = userinfo['work'], skills = userinfo['skills'],
     education = userinfo['education'], email=userinfo['email'], facebook = userinfo['facebook'], instagram = userinfo['instagram'],
-    github=userinfo['github'], linkedin=userinfo['linkedin'], twitter = userinfo['twitter'], profilepic='./static/img/profile.jpg')
+    github=userinfo['github'], linkedin=userinfo['linkedin'], twitter = userinfo['twitter'], profilepic='./static/img/profile.jpg',
+    weather=openweathermap('Seattle'))
 
 @app.route('/hobbies')
 def hobbies():
