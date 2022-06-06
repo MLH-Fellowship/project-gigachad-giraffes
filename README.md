@@ -8,11 +8,11 @@ A portfolio website for the orientation hackathon of the Production Engineering 
 
 Here is the landing page:
 
-![Landing Page](https://github.com/MLH-Fellowship/project-gigachad-giraffes/blob/main/READMEimg/LandingPage.png)
+![Landing Page]![TemplateThumbnail](https://user-images.githubusercontent.com/91065673/172251015-dfc5d191-cad7-4bd6-a4c8-5323d663eb98.gif)
 
 A tagline, name, and photo can be placed at the top. An about me section, a skills section, an education section, and an experience section are below. Jinja templating can be used to add additional elements in the skills, education, and experience section.
 
-![Jinja Templating](https://github.com/MLH-Fellowship/project-gigachad-giraffes/blob/main/READMEimg/JinjaFormatted.png)
+![Jinja Templating]![Jinja](https://user-images.githubusercontent.com/91065673/172251086-cf02433c-b97c-4c38-a9c2-d7e412bbb78a.png)
 
 <br>
 
@@ -20,7 +20,8 @@ A tagline, name, and photo can be placed at the top. An about me section, a skil
 
 Here is the hobbies page. 
 
-![Hobbies Page](https://github.com/MLH-Fellowship/project-gigachad-giraffes/blob/main/READMEimg/Hobbies.png)
+![Hobbies Page]![Gallery Page](https://user-images.githubusercontent.com/91065673/172251107-3209df5c-116a-4b8e-ac9f-53a7148ebb9c.png)
+
 
 There is a carousel that is jinja templated and can be used to add an infinite number of hobbies. It contains a title and a description of what is displayed in each specific image.
 
@@ -30,13 +31,15 @@ There is a carousel that is jinja templated and can be used to add an infinite n
 
 Here is the projects page.
 
-![Project Page](https://github.com/MLH-Fellowship/project-gigachad-giraffes/blob/main/READMEimg/Projects.png)
+![Project Page]![Project Page](https://user-images.githubusercontent.com/91065673/172251127-c37269c0-5f0b-44c6-9d21-ca88318b228f.png)
+
 
 A grid of projects will be displayed. This grid is jinja templated and additional projects can be added infinitely.
 
 A map of all the places you've been are at the bottom and can be modified by changing visited.csv.
 
-![Map](https://github.com/MLH-Fellowship/project-gigachad-giraffes/blob/main/READMEimg/Map.png)
+![Map]![Map](https://user-images.githubusercontent.com/91065673/172251142-70bc294c-28de-4965-9cd2-f2e195bc0de0.png)
+
 
 <br>
 
