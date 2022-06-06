@@ -19,6 +19,13 @@ userinfo = {'name': 'Alan Turing',
     'email': '123fakemail@gmail.com',
     'hobbies':  [{'title': 'Basketball', 'desc': 'My Favorite Sport!'}, {'title': 'Fishing', 'desc': 'My favorite way to relax!'}, 
     {'title': 'Paddleboarding', 'desc': 'My favorite watersport!'}],
+    'project_rows': [[{'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
+    {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
+    {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'}
+    ],[{'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
+    {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
+    {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'}
+    ]],
     'facebook': 'facebook.com',
     'github': 'github.com',
     'instagram': 'instagram.com',
@@ -40,6 +47,12 @@ def hobbies():
     title="Hobbies", 
     url=os.getenv("URL"),
     hobbies = userinfo["hobbies"],
+    email=userinfo['email'], 
+    facebook = userinfo['facebook'], 
+    instagram = userinfo['instagram'],
+    github=userinfo['github'], 
+    linkedin=userinfo['linkedin'], 
+    twitter = userinfo['twitter']
     )
 
 @app.route('/projects')
@@ -47,6 +60,13 @@ def projects():
     return render_template('projects.html', 
     title="Projects", 
     url=os.getenv("URL"),
+    project_rows = userinfo['project_rows'],
+    email=userinfo['email'], 
+    facebook = userinfo['facebook'], 
+    instagram = userinfo['instagram'],
+    github=userinfo['github'], 
+    linkedin=userinfo['linkedin'], 
+    twitter = userinfo['twitter']
     )
 
 
