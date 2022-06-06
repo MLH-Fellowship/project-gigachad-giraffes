@@ -33,25 +33,18 @@
 <body>
   {% include 'navbar.html' %}
       <div class="w3-content w3-display-container">
-        <div class="w3-display-container mySlides">
-          <img src="./static/img/hobbies_gallery/fishing.jpg" style="width:100%">
+        
+          {% for hobby in hobbies %} 
+          <div class="w3-display-container mySlides">
+          <img src="{{hobby.img}}" style="width:100%">
           <div class="w3-display-topmiddle w3-large w3-container w3-padding-16 w3-black">
-            Fishing
+            {{hobby.name}}
           </div>
           <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
-            Fishing is fun!
+            {{hobby.caption}}
           </div>
         </div>
-        
-        <div class="w3-display-container mySlides">
-          <img src="./static/img/hobbies_gallery/paddleboarding.jpg" style="width:100%">
-          <div class="w3-display-topmiddle w3-large w3-container w3-padding-16 w3-black">
-            Water
-          </div>
-          <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
-            I sure do like paddleboarding!
-          </div>
-      
+        {% endfor %}      
       <!-- <div class="w3-display-container mySlides">
         <img src="./static/img/hobbies_gallery/paddleboarding.jpg" style="width:100%">
         <div class="w3-display-topmiddle w3-large w3-container w3-padding-16 w3-black">
