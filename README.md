@@ -8,7 +8,7 @@ A portfolio website for the orientation hackathon of the Production Engineering 
 
 Here is the landing page:
 
-![Landing Page]![TemplateThumbnail](https://user-images.githubusercontent.com/91065673/172251015-dfc5d191-cad7-4bd6-a4c8-5323d663eb98.gif)
+![TemplateThumbnail](https://user-images.githubusercontent.com/91065673/172251015-dfc5d191-cad7-4bd6-a4c8-5323d663eb98.gif)
 
 A tagline, name, and photo can be placed at the top. An about me section, a skills section, an education section, and an experience section are below. Jinja templating can be used to add additional elements in the skills, education, and experience section.
 
