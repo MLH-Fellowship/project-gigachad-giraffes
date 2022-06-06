@@ -15,7 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
-    <link lang='sass' rel="stylesheet" href="./static/styles/hobbies.css">
+    <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
     <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -33,39 +33,31 @@
 <body>
   {% include 'navbar.html' %}
       <div class="w3-content w3-display-container">
-      <div class="w3-display-container mySlides">
-        <img src="./static/img/hobbies_gallery/basketball.jpeg" style="width:100%">
-        <div class="w3-display-topmiddle w3-large w3-container w3-padding-16 w3-black">
-          B-Ball
+        
+          {% for hobby in hobbies %} 
+          <div class="w3-display-container mySlides">
+          <img src="{{hobby.img}}" style="width:100%">
+          <div class="w3-display-topmiddle w3-large w3-container w3-padding-16 w3-black">
+            {{hobby.name}}
+          </div>
+          <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
+            {{hobby.caption}}
+          </div>
         </div>
-        <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
-          I love basketball
-        </div>
-      </div>
-      
-      <div class="w3-display-container mySlides">
-        <img src="./static/img/hobbies_gallery/fishing.jpg" style="width:100%">
-        <div class="w3-display-topmiddle w3-large w3-container w3-padding-16 w3-black">
-          Fishing
-        </div>
-        <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
-          Fishing is fun!
-        </div>
-      </div>
-      
-      <div class="w3-display-container mySlides">
+        {% endfor %}      
+      <!-- <div class="w3-display-container mySlides">
         <img src="./static/img/hobbies_gallery/paddleboarding.jpg" style="width:100%">
         <div class="w3-display-topmiddle w3-large w3-container w3-padding-16 w3-black">
           Water
         </div>
         <div class="w3-display-bottommiddle w3-large w3-container w3-padding-16 w3-black">
           I sure do like paddleboarding!
-        </div>
+        </div> -->
       </div>
       
       
-      <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
-      <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+      <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)" style="position: absolute;">&#10094;</button>
+      <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)" style="position: absolute;">&#10095;</button>
       
       </div>
       
@@ -94,21 +86,19 @@
 
         <div class="footer-left">
 
-            <p class="footer-links">
-                <a class="link-1" href="#">Home</a>
-                <a href="#">Blog</a>
-                <a href="#">Hobbies</a>
-                <a href="#">Experience</a>
-                <a href="#">Contact</a>
-            </p>
-
-            <p>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-instagram"></a>
-                <a href="#" class="fa fa-linkedin"></a>
-                <a href="#" class="fa fa-github"></a>
-            </p>   
+          <p class="footer-links">
+            <a class="link-1" href="/">Home</a>
+            <a href="/hobbies">Hobbies</a>
+            <a href="/projects">Projects</a>
+          </p>
+    
+          <p>
+            <a href="https://www.{{facebook}}" class="fa fa-facebook"></a>
+            <a href="https://www.{{twitter}}" class="fa fa-twitter"></a>
+            <a href="https://www.{{instagram}}" class="fa fa-instagram"></a>
+            <a href="https://www.{{linkedin}}" class="fa fa-linkedin"></a>
+            <a href="https://www.{{github}}" class="fa fa-github"></a>
+          </p>  
 
             <p id="copyright">Alan Turing &copy; 2022</p>
         </div>
