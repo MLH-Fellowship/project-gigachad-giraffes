@@ -20,7 +20,7 @@ A tagline, name, and photo can be placed at the top. An about me section, a skil
 
 Here is the hobbies page. 
 
-![Hobbies Page](https://github.com/MLH-Fellowship/project-gigachad-giraffes/blob/main/READMEimg/LandingPage.png)
+![Hobbies Page](https://github.com/MLH-Fellowship/project-gigachad-giraffes/blob/main/READMEimg/Hobbies.png)
 
 There is a carousel that is jinja templated and can be used to add an infinite number of hobbies.
 
