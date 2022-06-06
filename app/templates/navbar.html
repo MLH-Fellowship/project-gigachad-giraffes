@@ -1,39 +1,53 @@
-<!-- <header class="nav-bar">
-    <div class="nav-content">
-      <a href="/">
-        <div class="nav-logo">
-          <img src="./static/img/logo.svg" />
-        </div>
-      </a>
-    </div>
-  </header> -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="nav-content">
-        <a href="/">
-            <div class="nav-logo">
-                <img src="./static/img/logo.svg" />
-            </div>
+
+<div id="navbar">
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid justify-content-between">
+
+      <div class="d-flex">
+
+        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
+          <img id="logo"
+            src="./static/img/logo.svg"
+            loading="lazy"
+            style="margin-top: 2px;"
+          />
         </a>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-            <a class="nav-item nav-link" href="/" style="color:#ff8c00">Home</a>
-            <a class="nav-item nav-link" href="hobbies" style="color:#ff8c00">Hobbies</a>
-            <a class="nav-item nav-link" href="projects" style="color:#ff8c00">Projects</a>
-            <form id="contactForm" name="sentMessage" novalidate="novalidate"
-            action="mailto:{{email}}?subject=feedback&body=message">
-            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" style="background-color: #343a40; color:#ff8c00; border: #343a40;" type="submit">Contact</button>
-            </div>
-          </form>
+      </div>
+
+      <ul class="navbar-nav flex-row d-none d-md-flex mt-3">
+        <li class="nav-item me-3 me-lg-1 active">
+          <a class="nav-link" href="/">
+            Home
+          </a>
+        </li>
+        <li class="nav-item me-3 me-lg-1 active">
+          <a class="nav-link" href="hobbies">
+            Hobbies
+          </a>
+        </li>
+        <li class="nav-item me-3 me-lg-1 active">
+          <a class="nav-link" href="projects">
+            Projects
+          </a>
+        </li>
+        <li>
+          <form id="contactForm" name="sentMessage" novalidate="novalidate"
+              action="mailto:{{email}}?subject=feedback&body=message">
+          <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" style="background-color: #ff8c00;border: #343a40;" type="submit">Contact</button>
+          </div>
+        </form>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav flex-row">
+        <li>
           <a href="https://www.{{facebook}}" class="fa fa-facebook"></a>
-          <a href="https://www.{{twitter}}" class="fa fa-twitter"></a>
-          <a href="https://www.{{instagram}}" class="fa fa-instagram"></a>
-          <a href="https://www.{{linkedin}}" class="fa fa-linkedin"></a>
-          <a href="https://www.{{github}}" class="fa fa-github"></a>
-        </div>
+        </li>
+            <li><a href="https://www.{{twitter}}" class="fa fa-twitter"></a></li>
+            <li><a href="https://www.{{instagram}}" class="fa fa-instagram"></a></li>
+            <li><a href="https://www.{{linkedin}}" class="fa fa-linkedin"></a></li>
+            <li><a href="https://www.{{github}}" class="fa fa-github"></a></li>
+      </ul>
     </div>
-</nav>
+  </nav>
+  </div>
