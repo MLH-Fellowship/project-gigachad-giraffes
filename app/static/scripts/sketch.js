@@ -20,10 +20,10 @@ function preload() {
 }
 
 function setup() {
-  canvas = createCanvas(800, 600);
+  canvas = createCanvas(window.outerWidth, 400);
   visitmap = mappa.tileMap(options);
   visitmap.overlay(canvas);
-
+  
   for (let row of visited.rows) {
     let coords = countries[row.get('id')];
     let latitude = coords[0]
