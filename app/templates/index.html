@@ -42,6 +42,7 @@
             <li></li>
             <li></li>
     </ul>
+
 </div >
   {% include 'navbar.html' %}
 
@@ -49,7 +50,7 @@
     <br>
     <br>
     <div id="profile-picture" class="profile-picture">
-      <img src="./static/img/logo.jpg">
+      <img src="{{profilepic}}">
     </div>
     <h1>{{ name }}</h1>
     <h2> {{shortIntro}}</h2>
@@ -58,7 +59,7 @@
   <div class="card">
     <div class="container">
       <h2>About Myself:</h2>
-      <!--<img src="./static/img/sample_pic.jpg" id="img_1">-->
+      <hr>
       <p>{{longIntro}}</p>
     </div>
   </div>
@@ -69,6 +70,7 @@
     <div class="container">
       <h2>Education</h2>
       {% for experience in education %}
+      <hr>
       <div class="section">
         <img src={{experience.link}} class="img-responsive" alt="test1">
         <div class="upper">
@@ -89,8 +91,14 @@
     <div class="container">
       <h2>Skills</h2>
       <div class="upper">
+      <hr>
       <!--<img src="./static/img/sample_pic.jpg" id="img_1">-->
-      <p>{{skills}}</p>
+      <p>
+        {% for skill in skills %}
+          <img src="{{skill}}">
+        {% endfor %}
+      </p>
+      
       </div>
     </div>
   </div>
@@ -101,6 +109,7 @@
     <div class="container">
       <h2>Experience</h2>
       {% for experience in work %}
+      <hr>
         <div class="section">
           <img src={{experience.link}} class="img-responsive" alt="test1">
           <div class="upper">

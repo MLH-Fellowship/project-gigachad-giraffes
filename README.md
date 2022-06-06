@@ -82,3 +82,7 @@ $ flask run
 
 Access the website at `localhost:5000` or `127.0.0.1:5000` in the browser! 
 
+## Customizing
+
+Information in the python `__init__.py` file can be modified to add your name, hobbies, education, experiences, projects and more to the app.
+
