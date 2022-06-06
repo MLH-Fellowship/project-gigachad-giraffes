@@ -1,6 +1,6 @@
-# Portfolio Site - MLH Fellowship Pod 22.SUM14 Team Gigachad Giraffes
+# Portfolio Site - MLH Fellowship Pod 22.SUM14/Team Gigachad Giraffes
 
-A portfolio website for the week 1 hackathon of the Production Engineering Track. This project was developed with Flask, HTML/CSS, JavaScript. This project was developed by Tanzir Hasan, Ryson Wong, Krish Thawni
+A portfolio website for the orientation hackathon of the Production Engineering Track. This project was developed with Flask, HTML/CSS, JavaScript. This project was developed by Tanzir Hasan, Ryson Wong, Krish Thawni
 
 ## Components of the Website
 
