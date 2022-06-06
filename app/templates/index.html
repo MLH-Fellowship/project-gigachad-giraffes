@@ -49,7 +49,7 @@
     <br>
     <br>
     <div id="profile-picture" class="profile-picture">
-      <img src="./static/img/logo.jpg">
+      <img src="{{profilepic}}">
     </div>
     <h1>{{ name }}</h1>
     <h2> {{shortIntro}}</h2>
@@ -93,7 +93,12 @@
       <div class="upper">
       <hr>
       <!--<img src="./static/img/sample_pic.jpg" id="img_1">-->
-      <p>{{skills}}</p>
+      <p>
+        {% for skill in skills %}
+          <img src="{{skill}}">
+        {% endfor %}
+      </p>
+      
       </div>
     </div>
   </div>
