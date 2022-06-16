@@ -1,5 +1,7 @@
 # Portfolio Site - MLH Fellowship Pod 22.SUM14/Team Gigachad Giraffes
 
+A script to deploy this site can be found in redeploy-site.sh
+
 A portfolio website for the orientation hackathon of the Production Engineering Track. This project was developed with Flask, HTML/CSS, JavaScript. This project was developed by Tanzir Hasan, Ryson Wong, Krish Thawni
 
 ## Components of the Website
