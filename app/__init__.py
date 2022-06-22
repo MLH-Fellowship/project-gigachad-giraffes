@@ -41,7 +41,7 @@ def index():
     return render_template('index.html', title='MLH Fellow', url=os.getenv('URL'), name=userinfo['name'],
     shortIntro=userinfo['shortIntro'], longIntro = userinfo['longIntro'], work = userinfo['work'], skills = userinfo['skills'],
     education = userinfo['education'], email=userinfo['email'], facebook = userinfo['facebook'], instagram = userinfo['instagram'],
-    github=userinfo['github'], linkedin=userinfo['linkedin'], twitter = userinfo['twitter'], profilepic='./static/img/profile-pic.jpg',)
+    github=userinfo['github'], linkedin=userinfo['linkedin'], twitter = userinfo['twitter'], profilepic='./static/img/profile_pic.jpg',)
 
 @app.route('/hobbies')
 def hobbies():
