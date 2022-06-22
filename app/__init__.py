@@ -128,3 +128,18 @@ def delete_time_line_post():
     mydb.drop_tables([TimelinePost])#Deletes all posts made for demo
     mydb.create_tables([TimelinePost])
     return 'Emptied'
+
+@app.route('/timeline')
+
+def timeline():
+    return render_template('timeline.html',
+    posts = get_time_line_post(),
+    title="Timeline", 
+    url=os.getenv("URL"),
+    project_rows = userinfo['project_rows'],
+    email=userinfo['email'], 
+    facebook = userinfo['facebook'], 
+    instagram = userinfo['instagram'],
+    github=userinfo['github'], 
+    linkedin=userinfo['linkedin'], 
+    twitter = userinfo['twitter'])
