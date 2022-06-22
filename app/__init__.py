@@ -10,14 +10,13 @@ load_dotenv()
 app = Flask(__name__, static_folder='static')
 
 
-userinfo = {'name': 'Alan Turing',
-    'shortIntro': 'Aspiring Skynet Developer and Professional Programmer',
-    'longIntro': 'Alan Turing is from Kansas City, Missouri. He obtained his PhD at Yale. He currently works as a Software Developer. He is a driven individual who plans to one day work as a for his dream company: "Epic Games", and work on his favorite game, "Fortnite". Alan Turing is from Kansas City, Missouri. He obtained his PhD at Yale. He currently works as a Software Developer. He is a driven individual who plans to one day work as a for his dream company: "Epic Games", and work on his favorite game, "Fortnite"',
-    'work': [{'jobTitle': 'Software Engineer @ MLH', 'desc': "I created the backend of the LMS", "year": "1999", 'link':'./static/img/logo.jpg'},
-        {'jobTitle': 'Software Engineer @ Meta', 'desc': "I created facebook mobile application", "year": "2004-2022", 'link':'./static/img/logo.jpg'}],
+userinfo = {'name': 'Ryson Wong',
+    'shortIntro': 'CS Student at OSU',
+    'longIntro': 'Ryson Wong is from Ewa Beach, HI. He is currently studying Computer Science at Oregon State University. Ryson also serves as a satellite communications specialist in the Space Force.',
+    'work': [{'jobTitle': 'Satellite Maintainer', 'desc': "Hooked up wires", "year": "2018 - Present", 'link':'./static/img/space.jpg'},],
     'skills': ['./static/img/skillicons/c-.png','./static/img/skillicons/css-3.png', './static/img/skillicons/html-5.png',
     './static/img/skillicons/js.png','./static/img/skillicons/python.png'],
-    'education': [{'type': 'PhD of Computer Science', 'from': 'Columbia University', 'when': '1984-1989', 'desc': 'I studied stuff', 'link': './static/img/logo.jpg'}],
+    'education': [{'type': 'Bachelors of Computer Science', 'from': 'Oregon State University', 'when': '2021 - Present', 'desc': 'I studied Computers', 'link': './static/img/OSU.jpg'}],
     'email': '123fakemail@gmail.com',
     'hobbies':  [{'name': 'Basketball', 'caption': 'My Favorite Sport!', 'img': './static/img/hobbies_gallery/basketball.jpeg', 'active': 'active'},
      {'name': 'Fishing', 'caption': 'My favorite way to relax!', 'img': './static/img/hobbies_gallery/fishing.jpg', 'active': ''}, 
