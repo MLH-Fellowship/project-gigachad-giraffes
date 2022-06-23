@@ -63,6 +63,27 @@
 
     </div>
   </div>
+  <div class="card">
+    <div class="container">
+      <form action="/api/timeline_post" method="POST">
+        <div class="input-container">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" required />
+        </div>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" placeholder="Email" required />
+      </div>
+        <div class="input-container textarea">
+            <label for="content">Content</label>
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="Put your post here" required></textarea>
+        </div>
+        <div class="button-container">
+            <input class="button submit" type="submit" value="Add Timeline Post" />
+        </div>
+    </form>
+    </div>
+  </div>
   <br>
   <footer class="footer-distributed">
 

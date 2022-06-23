@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash
+from flask import Flask, redirect, render_template, request, flash
 from dotenv import load_dotenv
 from playhouse.shortcuts import model_to_dict
 from peewee import *
@@ -109,7 +109,7 @@ def post_time_line_post():
     email = request.form['email']
     content = request.form['content']
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
-    return model_to_dict(timeline_post)
+    return redirect(request.referrer)
 
 @app.route('/api/timeline_post', methods=['GET'])
 
