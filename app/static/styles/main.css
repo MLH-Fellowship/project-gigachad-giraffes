@@ -148,7 +148,7 @@ width: 200px;
   width: 5%;
   height: auto;
   float: left;   
-  margin: 30px 12px 3px 4px; 
+  margin: 12px 12px 12px 12px; 
 
 }
 
@@ -271,17 +271,6 @@ width: 200px;
   font-family: Roboto;
 }
 
-section {
-  width: 100%;
-  display: inline-block;
-  background: #ccc;
-  height: 60vh;
-  text-align: center;
-  font-size: 22px;
-  font-weight: 700;
-  text-decoration: underline;
-}
-
 .footer-distributed {
   background-color: black !important;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -368,22 +357,6 @@ section {
 @media (max-width: 600px) {
   .footer-distributed .footer-left, .footer-distributed .footer-right {
     text-align: center;
-  }
-
-
-  .fa-instagram {
-    background: #1d539f;
-    color: white;
-  }
-
-  .fa-linkedin {
-    background: #1d539f;
-    color: white;
-  }
-
-  .fa-github {
-    background: #1d539f;
-    color: white;
   }
 
   * {
@@ -496,21 +469,7 @@ section {
   }
 }
 
-  .carousel {
-    width:50%;
-    height: 50%;
-    margin: auto;
-  }
-  .carousel .item {
-    height: 50%;
-  }
-  .carousel img { height: 400px;}
-  .carousel .item img {
-    opacity: 0.3;
-    align-self: center;
-    margin: auto;
-    
-  }
+
   .center {
     display: block;
     margin-left: auto;
@@ -531,27 +490,6 @@ section {
     line-height: .2;
   }
 
-.carousel {
-  width: 50%;
-  height: 50%;
-  margin: auto;
-}
-
-
-.carousel .item {
-  height: 50%;
-}
-
-.carousel img {
-  height: 400px;
-}
-
-.carousel .item img {
-  opacity: 0.3;
-  align-self: center;
-  margin: auto;
-
-}
 
 .center {
   display: block;

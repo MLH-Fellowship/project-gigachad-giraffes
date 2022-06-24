@@ -64,7 +64,9 @@
     <div class="container">
       <h2>About Myself:</h2>
       <hr>
-      <p>{{longIntro}}</p>
+      {% for section in longIntro %}
+      <p>{{section}}</p>
+      {% endfor %}
     </div>
   </div>
 
