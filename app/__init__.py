@@ -85,7 +85,7 @@ def openweathermap(city_name):
 
 @app.route('/')
 def index():
-    return render_template('index.html', title='Tanzir Hasan', url=os.getenv('URL'), name=userinfo['name'],
+    return render_template('index.html', title='Tanz', url=os.getenv('URL'), name=userinfo['name'],
     shortIntro=userinfo['shortIntro'], longIntro = userinfo['longIntro'], work = userinfo['work'], skills = userinfo['skills'],
     education = userinfo['education'], email=userinfo['email'], facebook = userinfo['facebook'], instagram = userinfo['instagram'],
     github=userinfo['github'], linkedin=userinfo['linkedin'], twitter = userinfo['twitter'], profilepic='./static/img/profile.jpg',
