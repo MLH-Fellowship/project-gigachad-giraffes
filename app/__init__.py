@@ -2,8 +2,16 @@ import os
 from flask import Flask, render_template, request, flash
 from dotenv import load_dotenv
 from flask_mail import Message, Mail
-import requests
+from peewee import *
 
+mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+    user=os.getenv("MYSQL_DATABASE"),
+    password=os.getenv("MYSQL_DATABASE"),
+    host=os.getenv("MYSQL_DATABASE"),
+    port=3306
+)
+
+print(mydb)
 
 load_dotenv()
 
