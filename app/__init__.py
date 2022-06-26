@@ -3,6 +3,9 @@ from flask import Flask, render_template, request, flash
 from dotenv import load_dotenv
 from flask_mail import Message, Mail
 from peewee import *
+from datetime import *
+from playhouse.shortcuts import model_to_dict
+
 
 mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
     user=os.getenv("MYSQL_DATABASE"),
@@ -11,7 +14,17 @@ mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
     port=3306
 )
 
-print(mydb)
+class TimelinePost(Model):
+    name = CharField()
+    email = CharField()
+    content = TextField()
+    created_at = DateTimeField(default=datetime.datetime.now)
+
+    class Meta:
+        datebase = mydb
+
+mydb.connect()
+mydb.create_tables({TimelinePost})
 
 load_dotenv()
 
@@ -79,4 +92,22 @@ def projects():
     twitter = userinfo['twitter']
     )
 
+@app.route('/api/timeline_post', methods=['POST'])
+def post_time_line_post():
+    name = request.form['name']
+    email = request.form['email']
+    content = request.form['content']
+    timeline_post = TimelinePost.create(name=name, email=email, content=content)
+
+    return model_to_dict(timeline_post)
+
+@app.route('/api/timeline_post', methods=['GET'])
+def get_time_line_post():
+    return {
+        'timeline_posts': [
+            model_to_dict(p)
+            for p in
+TimelinePost.select().oreder_by(TimelinePost.created_at.desc())
+    ]
+    }
 
