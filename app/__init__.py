@@ -4,8 +4,7 @@ from playhouse.shortcuts import model_to_dict
 from peewee import *
 import datetime
 import os
-
-
+from flask_gravatar import Gravatar
 
 load_dotenv()
 
@@ -29,15 +28,14 @@ class TimelinePost(Model):
 mydb.connect()
 mydb.create_tables([TimelinePost])
 
-
-#gravatar = Gravatar(app,
-                    #size=900,
-                    #rating='g',
-                    #default='retro',
-                    #force_default=False,
-                   # force_lower=False,
-                    #use_ssl=False,
-                    #base_url=None)
+gravatar = Gravatar(app,
+                    size=900,
+                    rating='g',
+                    default='retro',
+                    force_default=False,
+                    force_lower=False,
+                    use_ssl=False,
+                    base_url=None)
 
 
 userinfo = {'name': 'Ryson Wong',
@@ -122,5 +120,16 @@ TimelinePost.select().order_by(TimelinePost.created_at.desc())
 
 
 @app.route('/timeline')
-def post_time_line_post():
-    return render_template('timeline.html', title="Timeline")
+def timeline():
+    return render_template('timeline.html', 
+    title="Timeline",
+    posts = get_time_line_post(),
+    title="Timeline", 
+    url=os.getenv("URL"),
+    project_rows = userinfo['project_rows'],
+    email=userinfo['email'], 
+    facebook = userinfo['facebook'], 
+    instagram = userinfo['instagram'],
+    github=userinfo['github'], 
+    linkedin=userinfo['linkedin'], 
+    twitter = userinfo['twitter'])
