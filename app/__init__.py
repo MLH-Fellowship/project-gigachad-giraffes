@@ -26,6 +26,9 @@ class TimelinePost(Model):
     class Meta:
         database = mydb
 
+mydb.connect()
+mydb.create_tables([TimelinePost])
+
 
 userinfo = {'name': 'Ryson Wong',
     'shortIntro': 'CS Student at OSU',
