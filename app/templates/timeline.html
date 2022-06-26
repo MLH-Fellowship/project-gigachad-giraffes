@@ -67,19 +67,19 @@
     <div class="container">
       <form action="/api/timeline_post" method="POST">
         <div class="input-container">
-            <label for="name">Name</label>
+            <label for="name">Name:</label>
             <br>
             <input type="text" name="name" id="name" placeholder="Name" required />
         </div>
         <div class="input-container">
-          <label for="email">Email</label>
+          <label for="email">Email:</label>
           <br>
           <input type="text" name="email" id="email" placeholder="Email" required />
       </div>
         <div class="input-container textarea">
-            <label for="content">Content</label>
+            <label for="content">Message:</label>
             <br>
-            <textarea name="content" id="content" cols="30" rows="10" placeholder="Put your post here" required></textarea>
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="Body" required></textarea>
         </div>
         <div class="button-container">
             <input class="button submit" type="submit" value="Add Timeline Post" />
@@ -96,6 +96,7 @@
         <a class="link-1" href="/">Home</a>
         <a href="/hobbies">Hobbies</a>
         <a href="/projects">Projects</a>
+        <a href="/timeline">Timeline</a>
       </p>
       <div class="mb-3">
         <a href="https://www.{{facebook}}" class="fa fa-facebook"></a>
@@ -104,7 +105,7 @@
         <a href="https://www.{{linkedin}}" class="fa fa-linkedin"></a>
         <a href="https://www.{{github}}" class="fa fa-github"></a>
       </div>
-      <div><p id="copyright">{{name}} &copy; 2022</p></div>
+      <div><p id="copyright">Ryson Wong &copy; 2022</p></div>
     </div>
   </footer>
   
