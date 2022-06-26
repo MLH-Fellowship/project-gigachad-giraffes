@@ -123,8 +123,7 @@ TimelinePost.select().order_by(TimelinePost.created_at.desc())
 def timeline():
     return render_template('timeline.html', 
     title="Timeline",
-    posts = get_time_line_post(),
-    title="Timeline", 
+    posts = get_time_line_post(), 
     url=os.getenv("URL"),
     project_rows = userinfo['project_rows'],
     email=userinfo['email'], 
