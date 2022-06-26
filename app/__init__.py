@@ -30,6 +30,16 @@ mydb.connect()
 mydb.create_tables([TimelinePost])
 
 
+#gravatar = Gravatar(app,
+                    #size=900,
+                    #rating='g',
+                    #default='retro',
+                    #force_default=False,
+                   # force_lower=False,
+                    #use_ssl=False,
+                    #base_url=None)
+
+
 userinfo = {'name': 'Ryson Wong',
     'shortIntro': 'CS Student at OSU',
     'longIntro': 'Ryson Wong is from Ewa Beach, HI. He is currently studying Computer Science at Oregon State University. Ryson also serves as a satellite communications specialist in the Space Force.',
@@ -110,3 +120,7 @@ TimelinePost.select().order_by(TimelinePost.created_at.desc())
     ]
     }
 
+
+@app.route('/timeline')
+def post_time_line_post():
+    return render_template('timeline.html', title="Timeline")
