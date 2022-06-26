@@ -1,34 +1,30 @@
-import os
-from flask import Flask, render_template, request, flash
+from flask import Flask, redirect, render_template, request, flash
 from dotenv import load_dotenv
-from flask_mail import Message, Mail
-from peewee import *
-from datetime import *
 from playhouse.shortcuts import model_to_dict
+from peewee import *
+import datetime
+import os
+
+
 
 load_dotenv()
 
-
 app = Flask(__name__, static_folder='static')
 
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
-    user=os.getenv("MYSQL_DATABASE"),
-    password=os.getenv("MYSQL_DATABASE"),
-    host=os.getenv("MYSQL_DATABASE"),
-    port=3306
-)
+mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"), 
+    user=os.getenv("MYSQL_USER"), 
+    password = os.getenv("MYSQL_PASSWORD"),
+    host = os.getenv("MYSQL_HOST"),
+    port = 3306 )
 
 class TimelinePost(Model):
     name = CharField()
     email = CharField()
     content = TextField()
-    created_at = DateTimeField(default=datetime.now)
+    created_at = DateTimeField(default=datetime.datetime.now)
 
     class Meta:
-        datebase = mydb
-
-mydb.connect()
-mydb.create_tables({TimelinePost})
+        database = mydb
 
 
 userinfo = {'name': 'Ryson Wong',
