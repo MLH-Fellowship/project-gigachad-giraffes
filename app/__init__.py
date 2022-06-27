@@ -53,11 +53,11 @@ userinfo = {'name': 'Tanzir Hasan',
         {'jobTitle': 'Software Engineer @ Meta', 'desc': "I created facebook mobile application", "year": "2004-2022", 'link':'./static/img/logo.jpg'}],
     'skills': ['./static/img/skillicons/c-.png','./static/img/skillicons/css-3.png', './static/img/skillicons/html-5.png',
     './static/img/skillicons/js.png','./static/img/skillicons/python.png'],
-    'education': [{'type': 'PhD of Computer Science', 'from': 'Columbia University', 'when': '1984-1989', 'desc': 'I studied stuff', 'link': './static/img/logo.jpg'}],
-    'email': '123fakemail@gmail.com',
-    'hobbies':  [{'name': 'Basketball', 'caption': 'My Favorite Sport!', 'img': './static/img/hobbies_gallery/basketball.jpeg', 'active': 'active'},
-     {'name': 'Fishing', 'caption': 'My favorite way to relax!', 'img': './static/img/hobbies_gallery/fishing.jpg', 'active': ''}, 
-    {'name': 'Paddleboarding', 'caption': 'My favorite watersport!', 'img': './static/img/hobbies_gallery/paddleboarding.jpg', 'active': ''}],
+    'education': [{'type': 'BS Computer Science', 'from': 'New York University', 'when': '2021-2025', 'desc': '''I study computer science at NYU, I\'m currently a sophomore and am part of the OSIRIS Lab for Offensive Security.
+    I have taken multiple high level mathematics courses and have obtained a minor in Mathematics. ''', 'link': './static/img/nyu.png'},
+    {'type': 'Highschool Graduate', 'from': 'Stuyvesant Highschool', 'when': '2017-2021', 'desc': '''I first developed my passion for Computer Science through the introductory and advanced computer science
+    courses I took in my four years at Stuyvesant Highschool. ''', 'link': './static/img/stuy.jpg'}],
+    'email': 'tanzirhasanhasan@gmail.com',
     'project_rows': [[{'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
     {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
     {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'}
@@ -65,10 +65,10 @@ userinfo = {'name': 'Tanzir Hasan',
     {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
     {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'}
     ]],
-    'facebook': 'facebook.com',
-    'github': 'github.com',
-    'instagram': 'instagram.com',
-    'linkedin':'linkedin.com' ,
+    'facebook': 'facebook.com/profile.php?id=100018180335292',
+    'github': 'github.com/tanzhasan',
+    'instagram': 'instagram.com/tanzirishere/',
+    'linkedin':'linkedin.com/in/tanzir-m-hasan/' ,
     'twitter':'twitter.com'
  }
 
@@ -90,20 +90,6 @@ def index():
     education = userinfo['education'], email=userinfo['email'], facebook = userinfo['facebook'], instagram = userinfo['instagram'],
     github=userinfo['github'], linkedin=userinfo['linkedin'], twitter = userinfo['twitter'], profilepic='./static/img/profile.jpg',
     weather=openweathermap('Seattle'))
-
-@app.route('/hobbies')
-def hobbies():
-    return render_template('hobbies.html', 
-    title="Hobbies", 
-    url=os.getenv("URL"),
-    hobbies = userinfo["hobbies"],
-    email=userinfo['email'], 
-    facebook = userinfo['facebook'], 
-    instagram = userinfo['instagram'],
-    github=userinfo['github'], 
-    linkedin=userinfo['linkedin'], 
-    twitter = userinfo['twitter']
-    )
 
 @app.route('/projects')
 def projects():
