@@ -4,5 +4,6 @@ __pycache__
 python3-virtualenv
 env1
 env_main
+.env1
 flask.sqlite
 .DS_Store
