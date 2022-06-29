@@ -12,10 +12,10 @@ class TestTimelinePost(unittest.TestCase):
         test_db.create_tables(MODELS)
 
     def tearDown(self):
-        test_db.drop_tables()
+        test_db.drop_tables(MODELS)
         test_db.close()
     
-    def test_timeline_post():
+    def test_timeline_post(self):
         a = TimelinePost.create(name='John Doe', email='john@example.com', contents="Hello, I am John")
         assert a.id == 1
         b = TimelinePost.create(name='Jane Doe', email='jane@example.com', contents="Hello, I am Jane")
