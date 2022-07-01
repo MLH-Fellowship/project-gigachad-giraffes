@@ -12,12 +12,15 @@ import requests
 load_dotenv()
 
 app = Flask(__name__, static_folder='static')
-
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"), 
-    user=os.getenv("MYSQL_USER"), 
-    password = os.getenv("MYSQL_PASSWORD"),
-    host = os.getenv("MYSQL_HOST"),
-    port = 3306 )
+if os.getenv('TESTING') == 'true':
+    print('testing app')
+    mydb = SqliteDatabase('file:memory?mode=memory&cache=shared',uri=True)
+else:
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"), 
+        user=os.getenv("MYSQL_USER"), 
+        password = os.getenv("MYSQL_PASSWORD"),
+        host = os.getenv("MYSQL_HOST"),
+        port = 3306 )
 
 class TimelinePost(Model):
     name = CharField()
@@ -107,9 +110,22 @@ def projects():
 
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
-    name = request.form['name']
-    email = request.form['email']
-    content = request.form['content']
+    try:
+        name = request.form['name']
+    except KeyError:
+        return "Invalid Name", 400
+    try:
+        email = request.form['email']
+        if not '@' in email:
+            return "Invalid Email", 400
+    except KeyError:
+        return "Invalid Email", 400
+    try:
+        content = request.form['content']
+        if len(content)<2:
+            return "Invalid Content", 400
+    except KeyError:
+        return "Invalid Content", 400
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
     if timeline_post.id > 10:
         TimelinePost.delete_by_id(timeline_post.id-10)
