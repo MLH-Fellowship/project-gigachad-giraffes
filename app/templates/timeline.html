@@ -46,90 +46,51 @@
 </div >
   {% include 'navbar.html' %}
 
-  <div class="profile">
-    <br>
-    <br>
-    <div id="profile-picture" class="profile-picture">
-      <img src="{{profilepic}}">
-    </div>
-    <h1>{{ name }}</h1>
-    <h2> {{shortIntro}}</h2>
-    <br>
-    <h2> The weather at my location: {{weather}}
-    <i class="fa fa-cloud" aria-hidden="true"></i>
-    </h2>
-  </div>
-
   <div class="card">
     <div class="container">
-      <h2>About Myself:</h2>
-      <hr>
-      {% for section in longIntro %}
-      <p>{{section}}</p>
-      {% endfor %}
-    </div>
-  </div>
-
-  <br>
-
-  <div class="card">
-    <div class="container">
-      <h2>Education</h2>
-      {% for experience in education %}
+      <h2>Timeline</h2>
+      {% for post in posts.timeline_posts %}
       <hr>
       <div class="section">
-        <img src={{experience.link}} class="img-responsive" alt="test1">
+        <img src={{post.email | gravatar}} class="img-responsive" alt="{{post.id}}">
         <div class="upper">
-          <br>
-          <p>{{experience.type}} from {{experience.from}}</p>
-          <p style="font-size: 15px;">{{experience.when}}</p>
+          <p style="text-align: center;">{{post.name}} at {{post.created_at}}</p>
+          <p>{{post.email}}</p>
         </div>
-        <div class="lower"><p>{{experience.desc}}</p></div>
+        <div class="lower"><p>{{post.content}}</p></div>
       </div>
       {% endfor %}
 
     </div>
   </div>
-
-  <br>
-
   <div class="card">
     <div class="container">
-      <h2>Skills</h2>
-      <div class="upper">
-      <hr>
-      <!--<img src="./static/img/sample_pic.jpg" id="img_1">-->
-      <div class="d-flex justify-content-center mb-4">
-        {% for skill in skills %}
-          <img src="{{skill}}">
-        {% endfor %}
-      </div>
-      </div>
-    </div>
-  </div>
-
-<br>
-
-  <div class="card">
-    <div class="container">
-      <h2>Experience</h2>
-      {% for experience in work %}
-      <hr>
-        <div class="section">
-          <img src={{experience.link}} class="img-responsive" alt="test1">
-          <div class="upper">
+      <form action="/api/timeline_post" method="POST">
+        <div class="input-container">
+            <label for="name">Name</label>
             <br>
-            <p>{{experience.jobTitle}}</p>
-            <p>{{experience.year}}</p>
-          </div>
-          <div class="lower"><p>{{experience.desc}}</p></div>
-          </div>
-      {% endfor %}
-
+            <input type="text" name="name" id="name" placeholder="Name" required />
+        </div>
+        <div class="input-container">
+          <label for="email">Email</label>
+          <br>
+          <input type="text" name="email" id="email" placeholder="Email" required />
+      </div>
+        <div class="input-container textarea">
+            <label for="content">Content</label>
+            <br>
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="Put your post here" required></textarea>
+        </div>
+        <div class="button-container">
+            <input class="button submit" type="submit" value="Add Timeline Post" />
+        </div>
+    </form>
     </div>
   </div>
   <br>
-  {% include 'footer.html' %}
+
+  {% include 'footer.html' %} 
+
 
 </body>
 
