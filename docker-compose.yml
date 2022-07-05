@@ -2,7 +2,7 @@ version: "3"
 services:
   myportfolio:
     container_name: myportfolio
-    build: .
+    build: . 
     restart: always
     env_file:
       - .env
@@ -11,10 +11,10 @@ services:
     ports:
       - "5000:5000"
     volumes:
-      - .:/project-gigachad_giraffes
+      - .:/myportfolio
     depends_on:
       - mysql
-
+    
   mysql:
     container_name: mysql
     image: mariadb
