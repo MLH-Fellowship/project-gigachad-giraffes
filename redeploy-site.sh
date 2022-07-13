@@ -1,7 +1,9 @@
 #!/bin/bash
-systemctl daemon-reload
-cd flask-portfolio
+
+cd ~/flask-portfolio
+
 git fetch && git reset origin/main --hard
-source env_main/bin/activate
-pip install -r requirements.txt
-systemctl restart myportfolio
+
+docker compose -f docker-compose.prod.yml down
+
+docker compose -f docker-compose.prod.yml up -d --build
