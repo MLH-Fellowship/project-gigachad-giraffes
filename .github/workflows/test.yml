@@ -12,6 +12,7 @@ jobs:
     name: Run Tests
     env:
       TESTING: true
+      APIKEY: ${{ secrets.OWM_API }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
