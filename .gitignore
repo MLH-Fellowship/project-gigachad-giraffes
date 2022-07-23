@@ -7,3 +7,4 @@ env_main
 .env1
 flask.sqlite
 .DS_Store
+Dockerfile
