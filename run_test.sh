@@ -1,3 +1,3 @@
 #!/bin/bash
-source env_main/bin/activate
+source python3-virtualenv/bin/activate
 python -m unittest discover -v tests
