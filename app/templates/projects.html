@@ -48,7 +48,7 @@
       <div class="row">
         {% for project in row %} 
           <div class="project-card">
-            <img src="./static/img/projects_pictures/unity_engine.jpg" alt="Unity">
+            <img src="{{project.name}}" alt="Unity">
             <h1>{{project.name}}</h1>
             <p class="title">{{project.tag}}</p>
             <p>{{project.tools}}</p>

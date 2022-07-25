@@ -54,9 +54,9 @@ userinfo = {'name': 'Ryson Wong',
     'hobbies':  [{'name': 'Basketball', 'caption': 'My Favorite Sport!', 'img': './static/img/hobbies_gallery/basketball.jpeg', 'active': 'active'},
      {'name': 'Fishing', 'caption': 'My favorite way to relax!', 'img': './static/img/hobbies_gallery/fishing.jpg', 'active': ''}, 
     {'name': 'Paddleboarding', 'caption': 'My favorite watersport!', 'img': './static/img/hobbies_gallery/paddleboarding.jpg', 'active': ''}],
-    'project_rows': [[{'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
-    {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'},
-    {'name': 'Mario', 'tag': 'Loving Recreation of Mario', 'tools': 'Unity, C#', 'link': 'github.com', 'img': './static/img/logo.jpg'}
+    'project_rows': [[{'name': 'Ryson Requests', 'tag': 'Loving Recreation of the popular memory game: "SIMON', 'tools': 'JavaScript, HTML, CSS', 'link': 'github.com/rysonw/Ryson_Requests', 'img': './static/img/hobbies_gallery/R.R.png'},
+    {'name': 'Battleship: Text Edition', 'tag': 'A text-based edition of the popular board game; "Battleship', 'tools': 'Python', 'link': 'github.com/rysonw/Battleship-TextGame', 'img': './static/img/hobbies_gallery/R.R.png'},
+    {'name': 'Pygame Card Game Collection', 'tag': 'A collection of card games using the module: PYGAME!', 'tools': 'Python', 'link': 'github.com/rysonw/Ryson-Card-Collection-and-More', 'img': './static/img/hobbies_gallery/Card Game.png'}
     ],
     ],
     'facebook': 'facebook.com',
