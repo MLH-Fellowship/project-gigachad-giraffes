@@ -58,6 +58,25 @@
       </div>
     {% endfor %}
 
+    <div class="card">
+      <div class="container">
+        <h2>Spotify API to show my favorite Music:</h2>
+      </div>
+    </div>
+    {% for row in project_rows %} 
+      <div class="row">
+        {% for project in row %} 
+          <div class="project-card">
+            <img src="./static/img/projects_pictures/unity_engine.jpg" alt="Unity">
+            <h1>{{project.name}}</h1>
+            <p class="title">{{project.tag}}</p>
+            <p>{{project.tools}}</p>
+            <flip_button><a href="https://www.{{project.link}}">Github Link</a></flip_button>
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+
     <br>
     <div class="card" id="map-title">
       <div class="container">
